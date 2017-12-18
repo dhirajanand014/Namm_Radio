@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/wifi_1_bar"
+        android:duration="500" />
+    <item
+        android:drawable="@drawable/wifi_2_bar"
+        android:duration="500" />
+    <item
+        android:drawable="@drawable/wifi_3_bar"
+        android:duration="500" />
+    <item
+        android:drawable="@drawable/wifi_all"
+        android:duration="500" />
+</animation-list>

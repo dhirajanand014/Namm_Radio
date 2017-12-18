@@ -1,0 +1,152 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="aegismatrix.com.namm_radio.MainActivity$StationsFragment">
+
+    <ImageSwitcher
+        android:id="@+id/programflpper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true" />
+
+
+    <RelativeLayout
+        android:id="@+id/playBuff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/programflpper"
+        android:layout_marginTop="30dp"
+        android:gravity="center">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/play_button_1"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/play_button_buffer" />
+
+
+        <com.wnafee.vector.MorphButton
+            android:id="@+id/playbut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="22dp"
+            android:background="#00000000"
+            android:scaleType="centerInside"
+            app:vc_endDrawable="@drawable/ic_play_to_pause"
+            app:vc_startDrawable="@drawable/ic_pause_to_play" />
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/imageButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/playBuff"
+        android:layout_centerHorizontal="true"
+        android:background="@color/transparent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/messageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="@color/transparent"
+                android:src="@drawable/button_selection_shape" />
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/voiceRecordButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="@color/transparent"
+                android:src="@drawable/button_selection_shape" />
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/cameraButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="@color/transparent"
+                android:src="@drawable/button_selection_shape" />
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/galleryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:src="@drawable/button_selection_shape" />
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/stationButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageButtons"
+        android:layout_marginTop="34dp"
+        android:background="#00000000">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardViewButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.7"
+            app:cardElevation="3dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="0dp">
+
+            <aegismatrix.com.namm_radio_buttons.StationButton
+                android:id="@+id/topButton"
+                android:layout_width="130dp"
+                android:layout_height="35dp"
+                android:background="@color/transparent"
+                android:onClick="changeStations"
+                android:textColor="@color/station_button_text_color_selection" />
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardViewButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_toEndOf="@+id/cardViewButton1"
+            android:alpha="0.7"
+            android:textAlignment="center"
+            app:cardElevation="3dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true">
+
+            <aegismatrix.com.namm_radio_buttons.StationButton
+                android:id="@+id/bottomButton"
+                android:layout_width="130dp"
+                android:layout_height="35dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/transparent"
+                android:onClick="changeStations"
+                android:textAlignment="center"
+                android:textColor="@color/station_button_text_color_selection" />
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+</RelativeLayout>

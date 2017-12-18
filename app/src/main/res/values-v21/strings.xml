@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="preparingPlayer">Preparing player..</string>
+    <string name="fetchLocation">Fetching location..</string>
+    <string name="connectingInternet">Connecting to internet..</string>
+</resources>
